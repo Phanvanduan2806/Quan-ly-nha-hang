@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Root bootstrap */
+p {
+    margin-bottom: 0rem !important;
+}
+
+ul {
+    padding-left: 0rem !important;
+}
+
+/* -------------- */
+:root {
+    --mainColor: #89216b;
+    --whiteColor: #ffffff;
+    --titleColor: #555555;
+    --labelColor: #333333;
+    --greyColor: grey;
+}
+
+html {
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+
+.dashboard__wrapper {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+}
+
+.container__left {
+    background-color: var(--labelColor);
+    width: 250px;
+    /* height: 100vh; */
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    color: var(--greyColor);
+    position: relative;
+}
+
+.container__left__showAll {
+    width: 250px;
+    background-color: #333333;
+    padding: 0px 20px;
+    position: relative;
+}
+
+.container__left__showIcon {
+    width: 70px;
+    padding: 0px 10px;
+    background-color: #333333;
+    position: relative;
+    display: none;
+}
+
+.showIcon__dashboard__logo {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px solid var(--greyColor);
+}
+
+.showIcon__dashboard__list__nav {
+    display: flex;
+    justify-content: center;
+}
+
+.showIcon__dashboard__list__nav ul li {
+    list-style: none;
+    padding: 12px 0px;
+}
+
+.showIcon__dashboard__list__nav ul li a {
+    text-decoration: none;
+    color: var(--greyColor);
+    font-size: 1.5rem;
+}
+
+.btn__menu {
+    position: absolute;
+    right: 0px;
+    transform: translateX(50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #D55745;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn__menu i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.container__logo-dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.5px solid var(--greyColor);
+    height: 60px;
+}
+
+.logo__dashboard {
+    font-size: 1.5rem;
+    color: var(--greyColor);
+}
+
+.menu--dashboard {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+
+.item__nav__dashboard {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    /* color: var(--greyColor); */
+    text-decoration: none;
+}
+
+.item__nav__dashboard i {
+    font-size: 1.5rem;
+}
+
+.item__nav__dashboard p {
+    font-size: 1.2rem;
+    margin-left: 40px;
+}
+
+.tittel__nav__dashboard {
+    padding: 5px 0px;
+    border-bottom: 0.5px solid var(--greyColor);
+}
+
+.tittel__nav__dashboard p {
+    font-size: 1.2rem;
+    color: var(--greyColor);
+}
+
+.container__right {
+    background-color: #F1F2F7;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.heading {
+    width: 100%;
+    height: 60px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: var(--whiteColor);
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading__left {
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading__icon {
+    margin-right: 40px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.heading__icon__advertise {
+    position: absolute;
+    top: 0px;
+    transform: translateY(-50%) translateX(50%);
+    right: 0px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading__icon__advertise p {
+    color: var(--whiteColor);
+    font-size: 0.8rem;
+}
+
+.bell--advertise {
+    background-color: #B13A42;
+}
+
+.envelope--advertise {
+    background-color: #3579F1;
+}
+
+.heading__right {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.laguages__image {
+    height: 40px;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.author {
+    margin-left: 20px;
+    position: relative;
+}
+
+.author__image {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.author__list {
+    position: absolute;
+    transform: (translateY(-100%));
+    background-color: white;
+    margin-top: 15px;
+    right: 0px;
+    padding: 10px;
+    min-width: 170px;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: none;
+    z-index: 999;
+}
+.author__name{
+    border-bottom: 0.5px solid #555;
+    padding: 5px 0px;
+}
+.author__name span{
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+    /* margin: 5px 0px; */
+}
+.author__list__after {
+    display: block;
+}
+
+.author__list ul li {
+    list-style: none;
+    display: block;
+    padding: 10px 0px;
+}
+
+.author__list ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.author__list ul li a:hover {
+    margin-left: 7px;
+    transition: all 0.3s ease;
+}
+
+.dasboard__path {
+    height: 50px;
+    margin-top: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    align-items: center;
+}
+
+.dasboard__path p {
+    color: #222529;
+    font-size: 1.2rem;
+}
+
+.container__dashboard {
+    padding: 20px 20px;
+}
+
+.dashboard__body {
+    background-color: #B13A42;
+}
+
+.container__left__mobile {
+    display: none;
+}
+
+.item__nav__dashboard__mobile {
+    display: flex !important;
+    align-items: center;
+}
+
+@media screen and (max-width:576px) {
+    .container__left__showAll {
+        display: none !important;
+    }
+
+    .container__left__showIcon {
+        display: none !important;
+    }
+
+    .container__left__mobile {
+        display: block !important;
+    }
+
+    .dashboard__wrapper {
+        flex-direction: column;
+    }
+}
+
+.logo__nav__mobile {
+    height: 40px;
+}
+
+.navbar-collapse {
+    margin: 0px 10px;
+}
+
+.navbar-brand {
+    padding: 10px 0px !important;
+}
+
+.nav--link {
+    color: var(--greyColor);
+}
+
+.nav--link--active {
+    color: white !important;
+}
+
+.row__body__active {
+    display: block !important;
+}
+
+.row__body {
+    display: none;
+}
+
+/* Btn  */
+.btn {
+    font-size: 1.4rem !important;
+    color: white !important;
+}
+
+.btn-label {
+    margin-right: 5px;
+}
+
+/* --------- */
+/*------------------ Reservation (Đặt bàn) -------------*/
+.booking__imgage{
+    width: calc(100% - 40px);
+}
+.booking__imgage img{
+    object-fit: contain;
+    margin-left: 20px;
+}
+.wrapper__booking {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: relative;
+    /* background-color: #555; */
+}
+.bg__btn__booking{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.booking__number{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #D55745;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 5px;
+    top: 5px;
+}
+.booking__number span{
+    color: var(--whiteColor);
+    font-size: 1rem;
+}
+.col--booking{
+    margin: 10px 0px;
+}
+/* Modal content */
+.modal-content{
+    border: none !important;
+}
+.modal-title{
+    font-size: 1.5rem !important;
+}
+.modal-body{
+    font-size: 1.3rem !important;
+}
+.modal-body input{
+    font-size: 1.3rem !important;
+    padding: 7px !important;
+}
+
+/*------------------------------ Oder food ---------------------------*/
+.item__Foods{
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: relative;
+    border-radius: 0.5rem;
+    margin: 10px 0px;
+}
+.food__name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.food__name span{
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.food__image{
+    width: 100%;
+    height: 200px;
+}
+.food__number{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.food__number input{
+    margin: 0px 10px;
+    width: 40px;
+    height: 30px;
+}
+.food__number button{
+    width: 30px;
+    height: 30px;
+    background-color: var(--mainColor);
+    color: var(--whiteColor);
+    border-radius: 15px;
+    border: none;
+}
+.food__number button span{
+    font-size: 1.7rem;
+}
+.bg__btn__oderFood{
+    padding-bottom: 15px;
+}
+.form__group__oderFood label{
+    font-size: 1.3rem;
+    color: #555555;
+}
+.form__group__oderFood select{
+    height: 30px;
+    padding: 0px 5px;
+    font-size: 1.3rem;
+}
+.form__group__oderFood button {
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    background-color: #89216b;
+    padding: 0px 10px;
+    margin-left: 5px;
+    color: var(--whiteColor);
+}
+.edit__food{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    /* border-radius: 50%;
+    background-color: #D55745; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 5px;
+    top: 5px;
+}
+.edit__food i{
+    font-size: 20px;
+    color: #89216b;
+    cursor: pointer;
+}
+.btn{
+    outline: none !important;
+   
+}
+.quantity__food{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.food__id{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #D55745;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 5px;
+    top: 5px;
+}
+.food__id span{
+    color: white;
+    font-size: 1rem;
+}
+.food__price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.price {
+    color: var(--mainColor);
+    font-size: 1.5rem;
+}
+.td__food__image{
+    height: 50px;
+    display: flex;
+    line-height: 50px;
+}
+.info__body{
+    font-size: 1.5rem;
+}
+.info__body input{
+    font-size: 1.2rem;
+    color: var(--greyColor);
+}
+/* infor ----------------------------------------------------------------------------------*/
+.img-account-profile {
+    height: 20rem;
+    width: 20rem;
+}
+.rounded-circle {
+    border-radius: 50% !important;
+}
+.card {
+    box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+}
+.card .card-header {
+    font-weight: 500;
+}
+.card-header:first-child {
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+.card-header {
+    padding: 1.3rem 1.35rem !important;
+    margin-bottom: 0;
+    background-color: rgba(33, 40, 50, 0.03);
+    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+}
+.form-control, .dataTable-input {
+    display: block;
+    width: 100%;
+    padding: 1rem 1rem !important;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #69707a;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #c5ccd6;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.35rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-top: 5px;
+}
+
+/* End infor */
+table {
+    width: 100%; /* Đảm bảo bảng chiếm hết chiều rộng của vùng chứa */
+    border-collapse: collapse; /* Gộp các đường viền của ô cùng nhau */
+  }
+  
+  td {
+    text-align: center; /* Căn giữa ngang */
+    vertical-align: middle; /* Căn giữa dọc */
+    border: 1px solid black; /* Tạo đường viền cho ô (tuỳ chọn) */
+    padding: 10px; /* Khoảng cách bên trong ô (tuỳ chọn) */
+  }
+  th {
+    text-align: center !important; /* Căn giữa ngang */
+    vertical-align: middle; /* Căn giữa dọc */
+    border: 1px solid black; /* Tạo đường viền cho ô (tuỳ chọn) */
+    padding: 10px; /* Khoảng cách bên trong ô (tuỳ chọn) */
+  }
+  canvas{
+    background-color: #F1F2F7;
+  }
+  .linkDashboard{
+    font-size: 1.3rem;
+    color: #B13A42;
+  }
